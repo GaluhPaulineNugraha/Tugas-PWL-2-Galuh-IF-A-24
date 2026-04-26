@@ -13,7 +13,13 @@ class Dosen extends Model
 
     protected $fillable = ['nidn', 'nama'];
 
-    public function mahasiswa() {
+    public function mahasiswa()
+    {
         return $this->hasMany(Mahasiswa::class, 'nidn');
+    }
+
+    public function jadwal()
+    {
+        return $this->hasMany(Jadwal::class, 'nidn');
     }
 }

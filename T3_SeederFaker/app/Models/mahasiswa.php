@@ -3,16 +3,25 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Dosen;
 
 class Mahasiswa extends Model
 {
+    protected $table = 'mahasiswa';
+
     protected $primaryKey = 'npm';
     public $incrementing = false;
     protected $keyType = 'string';
 
     protected $fillable = ['npm', 'nidn', 'nama'];
 
-    public function dosen() {
+    public function dosen()
+    {
         return $this->belongsTo(Dosen::class, 'nidn');
+    }
+
+    public function krs()
+    {
+        return $this->hasMany(Krs::class, 'npm');
     }
 }
