@@ -1,1 +1,1 @@
-*** Untuk tugas 4 hingga seterusnya ada di folder laravel tugas 3 ***
+*** Untuk tugas 4 hingga tugas 5 dikerjain di 1 repo yaitu ada di folder T3_SeederFaker ***
